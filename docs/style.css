@@ -15,7 +15,6 @@ header {
 
 main {
   margin: 18px auto;
-  width: fit-content;
 }
 
 main,
@@ -25,7 +24,7 @@ footer {
 
 section {
   padding: 12px 48px;
-  margin: auto auto 20px auto;
+  margin: auto auto 20px 280px;
   width: 50%;
   background-color: #dbdfea;
   border-radius: 20px;
