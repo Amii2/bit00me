@@ -70,15 +70,15 @@ table {
 }
 
 fieldset {
-    border-color: #8294c4;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
-    margin: 12px auto;
+  border-color: #8294c4;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  margin: 12px auto;
 }
 
 legend {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #firstInfo figure {
@@ -87,11 +87,102 @@ legend {
 
 #firstInfo {
   float: left;
-  background-color: #DBDFEA;
+  background-color: #dbdfea;
   border-radius: 20px;
   padding-left: 18px;
 }
 
 .navItem {
   margin: auto 6px;
+}
+
+@media screen and (orientation: portrait) {
+  header {
+    width: 100vw;
+    margin: 0px;
+    padding-bottom: 18px;
+  }
+
+  body {
+    margin: 0px;
+    width: 100vw;
+  }
+
+  main {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  main,
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    gap: 12px;
+  }
+
+  main > *,
+  footer > * {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  section,
+  #firstInfo {
+    width: 75% !important;
+    padding: 24px !important;
+  }
+
+  main iframe {
+    width: 100% !important;
+    height: auto;
+  }
+
+  #firstInfo {
+    float: none !important;
+  }
+
+  section {
+    margin: 0px !important;
+  }
+
+  tbody {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  tbody {
+    display: flex;
+  }
+
+  tbody > tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  tr:first-child {
+    display: none;
+  }
+
+  figure {
+    margin-top: 0px;
+  }
+
+  #firstInfo p {
+    margin-bottom: 0px;
+  }
+
+  dl {
+    margin-bottom: 0px;
+  }
+
+  dd {
+    margin-bottom: 4px;
+  }
+
+  dd:last-child {
+    margin-bottom: 0px;
+  }
 }
