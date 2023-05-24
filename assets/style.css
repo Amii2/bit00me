@@ -15,16 +15,13 @@ header {
 
 main {
   margin: 18px auto;
-}
-
-main,
-footer {
-  margin-left: 30px;
+  position: relative;
 }
 
 section {
   padding: 12px 48px;
-  margin: auto auto 20px 280px;
+  margin: auto;
+  margin-bottom: 18px;
   width: 50%;
   background-color: #dbdfea;
   border-radius: 20px;
@@ -86,7 +83,8 @@ legend {
 }
 
 #firstInfo {
-  float: left;
+  position: absolute;
+  left: calc(calc(25%) - 330px);
   background-color: #dbdfea;
   border-radius: 20px;
   padding-left: 18px;
@@ -96,7 +94,21 @@ legend {
   margin: auto 6px;
 }
 
-@media screen and (orientation: portrait) {
+tr i {
+  font-size: 18px;
+}
+
+td {
+  text-align: center;
+}
+
+main iframe {
+  aspect-ratio: 16 / 9;
+  width: 82% !important;
+  height: auto;
+}
+
+@media screen and (orientation: portrait), (max-width: 1024px) {
   header {
     width: 100vw;
     margin: 0px;
@@ -141,6 +153,21 @@ legend {
 
   #firstInfo {
     float: none !important;
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  #firstInfo > * {
+    margin: 0px 24px !important;
+  }
+
+  #firstInfo p {
+    margin-bottom: 0px;
+    margin-top: 8px;
   }
 
   section {
@@ -159,7 +186,8 @@ legend {
 
   tbody > tr {
     display: flex;
-    flex-direction: column;
+    gap: 24px;
+    font-size: 24px;
   }
 
   tr:first-child {
@@ -184,5 +212,29 @@ legend {
 
   dd:last-child {
     margin-bottom: 0px;
+  }
+
+  section#contacto {
+    margin-bottom: 24px !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  main {
+    margin-left: 12% !important;
+  }
+
+  footer {
+    margin-left: 12% !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    margin-left: 0px !important;
+  }
+
+  footer {
+    margin-left: 0px !important;
   }
 }
